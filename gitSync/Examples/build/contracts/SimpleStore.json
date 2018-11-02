@@ -1,0 +1,2661 @@
+{
+  "contractName": "SimpleStore",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "items",
+      "outputs": [
+        {
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "name": "units",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_price",
+          "type": "uint256"
+        },
+        {
+          "name": "_units",
+          "type": "uint256"
+        }
+      ],
+      "name": "newItem",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_itemIdx",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUsingStorage",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_itemIdx",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUsingMemory",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_itemIdx",
+          "type": "uint256"
+        },
+        {
+          "name": "_units",
+          "type": "uint256"
+        }
+      ],
+      "name": "addItemUsingStorage",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_itemIdx",
+          "type": "uint256"
+        },
+        {
+          "name": "_units",
+          "type": "uint256"
+        }
+      ],
+      "name": "addItemUsingMemory",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506103e4806100206000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631b03f43c1461007d578063210f8979146100be578063288469dd146100f557806329b856881461012c578063bfb231d214610163578063c3a9a866146101ab575b600080fd5b34801561008957600080fd5b506100a8600480360381019080803590602001909291905050506101ec565b6040518082815260200191505060405180910390f35b3480156100ca57600080fd5b506100f3600480360381019080803590602001909291908035906020019092919050505061021b565b005b34801561010157600080fd5b5061012a6004803603810190808035906020019092919080359060200190929190505050610252565b005b34801561013857600080fd5b5061016160048036038101908080359060200190929190803590602001909291905050506102ad565b005b34801561016f57600080fd5b5061018e60048036038101908080359060200190929190505050610316565b604051808381526020018281526020019250505060405180910390f35b3480156101b757600080fd5b506101d660048036038101908080359060200190929190505050610349565b6040518082815260200191505060405180910390f35b6000806000838154811015156101fe57fe5b906000526020600020906002020190508060010154915050919050565b6000808381548110151561022b57fe5b90600052602060002090600202019050818160010160008282540192505081905550505050565b61025a61039e565b60008381548110151561026957fe5b906000526020600020906002020160408051908101604052908160008201548152602001600182015481525050905081816020018181510191508181525050505050565b6102b561039e565b6040805190810160405280848152602001838152509050600081908060018154018082558091505090600182039060005260206000209060020201600090919290919091506000820151816000015560208201518160010155505050505050565b60008181548110151561032557fe5b90600052602060002090600202016000915090508060000154908060010154905082565b600061035361039e565b60008381548110151561036257fe5b90600052602060002090600202016040805190810160405290816000820154815260200160018201548152505090508060200151915050919050565b6040805190810160405280600081526020016000815250905600a165627a7a72305820c93d655a6251ae9305bcd183746aed7475ca3ebe2e06e646ca06eb676ee287570029",
+  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631b03f43c1461007d578063210f8979146100be578063288469dd146100f557806329b856881461012c578063bfb231d214610163578063c3a9a866146101ab575b600080fd5b34801561008957600080fd5b506100a8600480360381019080803590602001909291905050506101ec565b6040518082815260200191505060405180910390f35b3480156100ca57600080fd5b506100f3600480360381019080803590602001909291908035906020019092919050505061021b565b005b34801561010157600080fd5b5061012a6004803603810190808035906020019092919080359060200190929190505050610252565b005b34801561013857600080fd5b5061016160048036038101908080359060200190929190803590602001909291905050506102ad565b005b34801561016f57600080fd5b5061018e60048036038101908080359060200190929190505050610316565b604051808381526020018281526020019250505060405180910390f35b3480156101b757600080fd5b506101d660048036038101908080359060200190929190505050610349565b6040518082815260200191505060405180910390f35b6000806000838154811015156101fe57fe5b906000526020600020906002020190508060010154915050919050565b6000808381548110151561022b57fe5b90600052602060002090600202019050818160010160008282540192505081905550505050565b61025a61039e565b60008381548110151561026957fe5b906000526020600020906002020160408051908101604052908160008201548152602001600182015481525050905081816020018181510191508181525050505050565b6102b561039e565b6040805190810160405280848152602001838152509050600081908060018154018082558091505090600182039060005260206000209060020201600090919290919091506000820151816000015560208201518160010155505050505050565b60008181548110151561032557fe5b90600052602060002090600202016000915090508060000154908060010154905082565b600061035361039e565b60008381548110151561036257fe5b90600052602060002090600202016040805190810160405290816000820154815260200160018201548152505090508060200151915050919050565b6040805190810160405280600081526020016000815250905600a165627a7a72305820c93d655a6251ae9305bcd183746aed7475ca3ebe2e06e646ca06eb676ee287570029",
+  "sourceMap": "26:1052:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:1052:1;;;;;;;",
+  "deployedSourceMap": "26:1052:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;289:205;;8:9:-1;5:2;;;30:1;27;20:12;5:2;289:205:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;709:150;;8:9:-1;5:2;;;30:1;27;20:12;5:2;709:150:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;865:210;;8:9:-1;5:2;;;30:1;27;20:12;5:2;865:210:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;147:136;;8:9:-1;5:2;;;30:1;27;20:12;5:2;147:136:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;121:19;;8:9:-1;5:2;;;30:1;27;20:12;5:2;121:19:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;500:203;;8:9:-1;5:2;;;30:1;27;20:12;5:2;500:203:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;289:205;405:4;425:17;445:5;451:8;445:15;;;;;;;;;;;;;;;;;;;;425:35;;477:4;:10;;;470:17;;289:205;;;;:::o;709:150::-;787:17;807:5;813:8;807:15;;;;;;;;;;;;;;;;;;;;787:35;;846:6;832:4;:10;;;:20;;;;;;;;;;;709:150;;;:::o;865:210::-;1004:16;;:::i;:::-;1023:5;1029:8;1023:15;;;;;;;;;;;;;;;;;;;;1004:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;1062:6;1048:4;:10;;:20;;;;;;;;;;;865:210;;;:::o;147:136::-;211:16;;:::i;:::-;230:20;;;;;;;;;235:6;230:20;;;;243:6;230:20;;;211:39;;260:5;271:4;260:16;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;260:16:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;147:136;;;:::o;121:19::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;500:203::-;615:4;635:16;;:::i;:::-;654:5;660:8;654:15;;;;;;;;;;;;;;;;;;;;635:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;686:4;:10;;;679:17;;500:203;;;;:::o;26:1052::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.22;\n\ncontract SimpleStore {\n    struct Item {\n        uint price;\n        uint units; \n    }\n  \n    Item[] public items;\n\n    function newItem(uint _price, uint _units) public\n    {\n        Item memory item = Item(_price, _units);\n        items.push(item);\n    }\n\n    function getUsingStorage(uint _itemIdx) public view\n    // set to non-view to estimate gas\n    // view\n    returns (uint)\n    {\n        Item storage item = items[_itemIdx];\n        return item.units;\n    }\n\n    function getUsingMemory(uint _itemIdx) public view\n    // set to non-view to estimate gas\n    // view\n    returns (uint)\n    {\n        Item memory item = items[_itemIdx];\n        return item.units;\n    }\n\n    function addItemUsingStorage(uint _itemIdx, uint _units) public\n    {\n        Item storage item = items[_itemIdx];\n        item.units += _units;\n    }\n\n    function addItemUsingMemory(uint _itemIdx, uint _units) public view\n      // set to non-view to estimate gas\n      // view\n      {\n        Item memory item = items[_itemIdx];\n        item.units += _units;\n    }\n\n}",
+  "sourcePath": "/home/dev-d/Desktop/BlockChain/Examples/contracts/SimpleStore.sol",
+  "ast": {
+    "absolutePath": "/home/dev-d/Desktop/BlockChain/Examples/contracts/SimpleStore.sol",
+    "exportedSymbols": {
+      "SimpleStore": [
+        162
+      ]
+    },
+    "id": 163,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 162,
+        "linearizedBaseContracts": [
+          162
+        ],
+        "name": "SimpleStore",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SimpleStore.Item",
+            "id": 63,
+            "members": [
+              {
+                "constant": false,
+                "id": 60,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 63,
+                "src": "75:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 59,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "75:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 62,
+                "name": "units",
+                "nodeType": "VariableDeclaration",
+                "scope": 63,
+                "src": "95:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 61,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "95:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Item",
+            "nodeType": "StructDefinition",
+            "scope": 162,
+            "src": "53:60:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 66,
+            "name": "items",
+            "nodeType": "VariableDeclaration",
+            "scope": 162,
+            "src": "121:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+              "typeString": "struct SimpleStore.Item[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 64,
+                "name": "Item",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 63,
+                "src": "121:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                  "typeString": "struct SimpleStore.Item"
+                }
+              },
+              "id": 65,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "121:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage_ptr",
+                "typeString": "struct SimpleStore.Item[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 86,
+              "nodeType": "Block",
+              "src": "201:82:1",
+              "statements": [
+                {
+                  "assignments": [
+                    74
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 74,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 87,
+                      "src": "211:16:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 73,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "211:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 79,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "_price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 68,
+                        "src": "235:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 77,
+                        "name": "_units",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 70,
+                        "src": "243:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 75,
+                      "name": "Item",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 63,
+                      "src": "230:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Item_$63_storage_ptr_$",
+                        "typeString": "type(struct SimpleStore.Item storage pointer)"
+                      }
+                    },
+                    "id": 78,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "230:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_memory",
+                      "typeString": "struct SimpleStore.Item memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "211:39:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "item",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 74,
+                        "src": "271:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                          "typeString": "struct SimpleStore.Item memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                          "typeString": "struct SimpleStore.Item memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 80,
+                        "name": "items",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "260:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                          "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                        }
+                      },
+                      "id": 82,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "260:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Item_$63_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct SimpleStore.Item storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 84,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "260:16:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 85,
+                  "nodeType": "ExpressionStatement",
+                  "src": "260:16:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 87,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "newItem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 68,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "164:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 67,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 70,
+                  "name": "_units",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "177:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 69,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "177:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:26:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:0:1"
+            },
+            "scope": 162,
+            "src": "147:136:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "415:79:1",
+              "statements": [
+                {
+                  "assignments": [
+                    95
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 95,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 104,
+                      "src": "425:17:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 94,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "425:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 99,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 96,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "445:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 98,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 97,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 89,
+                      "src": "451:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "445:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "425:35:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 100,
+                      "name": "item",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 95,
+                      "src": "477:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                        "typeString": "struct SimpleStore.Item storage pointer"
+                      }
+                    },
+                    "id": 101,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "units",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 62,
+                    "src": "477:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 93,
+                  "id": 102,
+                  "nodeType": "Return",
+                  "src": "470:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 104,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getUsingStorage",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 90,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 89,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "314:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 88,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "313:15:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 92,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "405:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "405:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "404:6:1"
+            },
+            "scope": 162,
+            "src": "289:205:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 120,
+              "nodeType": "Block",
+              "src": "625:78:1",
+              "statements": [
+                {
+                  "assignments": [
+                    112
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 112,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 121,
+                      "src": "635:16:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 111,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "635:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 116,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 113,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "654:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 115,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 114,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 106,
+                      "src": "660:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "654:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "635:34:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "item",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 112,
+                      "src": "686:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item memory"
+                      }
+                    },
+                    "id": 118,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "units",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 62,
+                    "src": "686:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 110,
+                  "id": 119,
+                  "nodeType": "Return",
+                  "src": "679:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 121,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getUsingMemory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 106,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "524:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 105,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "524:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "523:15:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 109,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "615:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 108,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "615:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "614:6:1"
+            },
+            "scope": 162,
+            "src": "500:203:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 140,
+              "nodeType": "Block",
+              "src": "777:82:1",
+              "statements": [
+                {
+                  "assignments": [
+                    129
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 129,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 141,
+                      "src": "787:17:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 128,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "787:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 133,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 130,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "807:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 132,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 131,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 123,
+                      "src": "813:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "807:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "787:35:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 134,
+                        "name": "item",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "832:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item storage pointer"
+                        }
+                      },
+                      "id": 136,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "units",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 62,
+                      "src": "832:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 137,
+                      "name": "_units",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 125,
+                      "src": "846:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "832:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "832:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 141,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addItemUsingStorage",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 123,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 141,
+                  "src": "738:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 122,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "738:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 125,
+                  "name": "_units",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 141,
+                  "src": "753:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 124,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "753:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "737:28:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 127,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "777:0:1"
+            },
+            "scope": 162,
+            "src": "709:150:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 160,
+              "nodeType": "Block",
+              "src": "994:81:1",
+              "statements": [
+                {
+                  "assignments": [
+                    149
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 149,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 161,
+                      "src": "1004:16:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 148,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "1004:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 153,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 150,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "1023:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 152,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 151,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 143,
+                      "src": "1029:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1023:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1004:34:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 158,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 154,
+                        "name": "item",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 149,
+                        "src": "1048:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                          "typeString": "struct SimpleStore.Item memory"
+                        }
+                      },
+                      "id": 156,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "units",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 62,
+                      "src": "1048:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 157,
+                      "name": "_units",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 145,
+                      "src": "1062:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1048:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 159,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1048:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 161,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "addItemUsingMemory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 146,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 143,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 161,
+                  "src": "893:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 142,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "893:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 145,
+                  "name": "_units",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 161,
+                  "src": "908:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 144,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "908:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "892:28:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 147,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "994:0:1"
+            },
+            "scope": 162,
+            "src": "865:210:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 163,
+        "src": "26:1052:1"
+      }
+    ],
+    "src": "0:1078:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/dev-d/Desktop/BlockChain/Examples/contracts/SimpleStore.sol",
+    "exportedSymbols": {
+      "SimpleStore": [
+        162
+      ]
+    },
+    "id": 163,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 162,
+        "linearizedBaseContracts": [
+          162
+        ],
+        "name": "SimpleStore",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SimpleStore.Item",
+            "id": 63,
+            "members": [
+              {
+                "constant": false,
+                "id": 60,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 63,
+                "src": "75:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 59,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "75:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 62,
+                "name": "units",
+                "nodeType": "VariableDeclaration",
+                "scope": 63,
+                "src": "95:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 61,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "95:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Item",
+            "nodeType": "StructDefinition",
+            "scope": 162,
+            "src": "53:60:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 66,
+            "name": "items",
+            "nodeType": "VariableDeclaration",
+            "scope": 162,
+            "src": "121:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+              "typeString": "struct SimpleStore.Item[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 64,
+                "name": "Item",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 63,
+                "src": "121:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                  "typeString": "struct SimpleStore.Item"
+                }
+              },
+              "id": 65,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "121:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage_ptr",
+                "typeString": "struct SimpleStore.Item[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 86,
+              "nodeType": "Block",
+              "src": "201:82:1",
+              "statements": [
+                {
+                  "assignments": [
+                    74
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 74,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 87,
+                      "src": "211:16:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 73,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "211:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 79,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "_price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 68,
+                        "src": "235:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 77,
+                        "name": "_units",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 70,
+                        "src": "243:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 75,
+                      "name": "Item",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 63,
+                      "src": "230:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Item_$63_storage_ptr_$",
+                        "typeString": "type(struct SimpleStore.Item storage pointer)"
+                      }
+                    },
+                    "id": 78,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "230:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_memory",
+                      "typeString": "struct SimpleStore.Item memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "211:39:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "item",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 74,
+                        "src": "271:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                          "typeString": "struct SimpleStore.Item memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                          "typeString": "struct SimpleStore.Item memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 80,
+                        "name": "items",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "260:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                          "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                        }
+                      },
+                      "id": 82,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "260:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Item_$63_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct SimpleStore.Item storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 84,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "260:16:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 85,
+                  "nodeType": "ExpressionStatement",
+                  "src": "260:16:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 87,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "newItem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 68,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "164:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 67,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 70,
+                  "name": "_units",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "177:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 69,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "177:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:26:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:0:1"
+            },
+            "scope": 162,
+            "src": "147:136:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "415:79:1",
+              "statements": [
+                {
+                  "assignments": [
+                    95
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 95,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 104,
+                      "src": "425:17:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 94,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "425:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 99,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 96,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "445:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 98,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 97,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 89,
+                      "src": "451:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "445:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "425:35:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 100,
+                      "name": "item",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 95,
+                      "src": "477:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                        "typeString": "struct SimpleStore.Item storage pointer"
+                      }
+                    },
+                    "id": 101,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "units",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 62,
+                    "src": "477:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 93,
+                  "id": 102,
+                  "nodeType": "Return",
+                  "src": "470:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 104,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getUsingStorage",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 90,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 89,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "314:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 88,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "313:15:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 92,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "405:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "405:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "404:6:1"
+            },
+            "scope": 162,
+            "src": "289:205:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 120,
+              "nodeType": "Block",
+              "src": "625:78:1",
+              "statements": [
+                {
+                  "assignments": [
+                    112
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 112,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 121,
+                      "src": "635:16:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 111,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "635:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 116,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 113,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "654:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 115,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 114,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 106,
+                      "src": "660:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "654:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "635:34:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "item",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 112,
+                      "src": "686:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item memory"
+                      }
+                    },
+                    "id": 118,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "units",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 62,
+                    "src": "686:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 110,
+                  "id": 119,
+                  "nodeType": "Return",
+                  "src": "679:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 121,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getUsingMemory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 106,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "524:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 105,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "524:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "523:15:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 109,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "615:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 108,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "615:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "614:6:1"
+            },
+            "scope": 162,
+            "src": "500:203:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 140,
+              "nodeType": "Block",
+              "src": "777:82:1",
+              "statements": [
+                {
+                  "assignments": [
+                    129
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 129,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 141,
+                      "src": "787:17:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 128,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "787:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 133,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 130,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "807:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 132,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 131,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 123,
+                      "src": "813:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "807:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "787:35:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 134,
+                        "name": "item",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "832:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item storage pointer"
+                        }
+                      },
+                      "id": 136,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "units",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 62,
+                      "src": "832:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 137,
+                      "name": "_units",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 125,
+                      "src": "846:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "832:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "832:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 141,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addItemUsingStorage",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 123,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 141,
+                  "src": "738:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 122,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "738:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 125,
+                  "name": "_units",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 141,
+                  "src": "753:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 124,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "753:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "737:28:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 127,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "777:0:1"
+            },
+            "scope": 162,
+            "src": "709:150:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 160,
+              "nodeType": "Block",
+              "src": "994:81:1",
+              "statements": [
+                {
+                  "assignments": [
+                    149
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 149,
+                      "name": "item",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 161,
+                      "src": "1004:16:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                        "typeString": "struct SimpleStore.Item"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 148,
+                        "name": "Item",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 63,
+                        "src": "1004:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_storage_ptr",
+                          "typeString": "struct SimpleStore.Item"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 153,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 150,
+                      "name": "items",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 66,
+                      "src": "1023:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Item_$63_storage_$dyn_storage",
+                        "typeString": "struct SimpleStore.Item storage ref[] storage ref"
+                      }
+                    },
+                    "id": 152,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 151,
+                      "name": "_itemIdx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 143,
+                      "src": "1029:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1023:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Item_$63_storage",
+                      "typeString": "struct SimpleStore.Item storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1004:34:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 158,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 154,
+                        "name": "item",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 149,
+                        "src": "1048:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Item_$63_memory_ptr",
+                          "typeString": "struct SimpleStore.Item memory"
+                        }
+                      },
+                      "id": 156,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "units",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 62,
+                      "src": "1048:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 157,
+                      "name": "_units",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 145,
+                      "src": "1062:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1048:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 159,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1048:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 161,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "addItemUsingMemory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 146,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 143,
+                  "name": "_itemIdx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 161,
+                  "src": "893:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 142,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "893:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 145,
+                  "name": "_units",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 161,
+                  "src": "908:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 144,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "908:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "892:28:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 147,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "994:0:1"
+            },
+            "scope": 162,
+            "src": "865:210:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 163,
+        "src": "26:1052:1"
+      }
+    ],
+    "src": "0:1078:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-10-06T06:54:45.022Z"
+}
