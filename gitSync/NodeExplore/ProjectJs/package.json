@@ -52,7 +52,8 @@
   },
   "dependencies": {},
   "scripts": {
-    "dev": "webpack"
+    "dev": "webpack --mode development",
+    "prd": "webpack --mode production"
   },
   "author": "devd",
   "license": "ISC"
