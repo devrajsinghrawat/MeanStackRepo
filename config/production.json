@@ -1,0 +1,6 @@
+{
+    "name": "my Express Demo PRD",
+    "mail": {
+        "host": "prod-email-server"
+    }
+}
