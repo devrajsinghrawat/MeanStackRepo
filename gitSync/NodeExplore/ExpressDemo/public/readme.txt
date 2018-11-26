@@ -1,0 +1,1 @@
+this is static content of project and should be served using static middleware
